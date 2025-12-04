@@ -2,7 +2,7 @@ ShortURL
 
 A clean, fast, and reliable URL shortening platform built with Java Spring Boot.
 
-  ![Dahboard](./home.png)
+  ![Dahboard](assets/home.png)
 Overview
 
 ShortURL is a modern web application that allows users to quickly shorten long URLs, generate QR codes, manage link history, and access shortened links instantly. The system is designed with a clean UI, efficient backend logic, and a scalable architecture suitable for production-grade use.
