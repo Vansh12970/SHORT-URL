@@ -18,7 +18,7 @@ public class ShortenerController {
 
     private final UrlService urlService;
 
-    @Value("${app.baseUrl:http://localhost:8080}")
+    @Value("${app.baseUrl}")
     private String baseUrl;
 
     public ShortenerController(UrlService urlService) {
