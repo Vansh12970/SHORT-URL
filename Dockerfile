@@ -15,6 +15,7 @@ RUN mvn -q -e -DskipTests package
 # Copy jar to a predictable name (always app.jar)
 RUN cp target/url-shortener-0.0.1-SNAPSHOT.jar app.jar
 
+ENV PORT=8080
 EXPOSE 8080
 
 # Run the application
