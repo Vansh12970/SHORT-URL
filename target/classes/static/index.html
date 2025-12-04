@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ShortURL – Simple & Clean</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" type="image/png" href="/favicon-v2.png" />
+  <!-- QR code library from CDN (small and reliable) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">SHORT<span class="accent">URL</span></div>
+      <nav class="nav">
+        <button id="viewHistoryBtn" class="btn small">History</button>
+        <button class="btn ghost" id="openSignupBtn" type="button">Sign Up</button>
+        <button class="btn primary" id="openSigninBtn" type="button">Sign In</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container hero">
+    <section class="left-card">
+      <h2 class="muted">Enter a long URL</h2>
+      <input id="longUrl" type="url" placeholder="Enter long link here (must include http/https)" />
+      <button id="shortenBtn" class="btn big">Short URL</button>
+
+      <div id="result" class="result hidden">
+        <div class="result-row">
+          <input id="shortUrl" readonly />
+          <div class="result-actions">
+            <button id="visitBtn" class="btn small ghost">Visit</button>
+            <button id="copyBtn" class="btn small ghost">Copy</button>
+            <button id="shareBtn" class="btn small ghost">Share</button>
+            <button id="qrBtn" class="btn small ghost">QR</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="right-panel">
+      <h1>The Original URL Shortener</h1>
+      <p>• Create shorter URLs quickly • No login required • History stored in your browser only.</p>
+
+      <div class="cta-row">
+        <button id="viewPlans" class="btn outline">View Plans</button>
+        <button class="btn ghost" id="openSignupBtn" type="button">Create Free Account</button>
+      </div>
+
+      <div class="features">
+        <div>Detailed Link Analytics (coming)</div>
+        <div>Bulk Short URLs (coming)</div>
+        <div>Fully Branded Domains (coming)</div>
+        <div>Link Management Features (coming)</div>
+      </div>
+    </section>
+</main>
+
+<div class="ad-banner"><h3>YOUR AD HERE</h3></div>
+
+
+  <!-- History modal -->
+  <div id="historyModal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Your History</h3>
+      <div id="historyList"></div>
+      <div class="modal-actions">
+        <button id="clearHistory" class="btn equal">Clear</button>
+        <button id="closeHistory" class="btn equal">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- QR Code Modal -->
+<div id="qrModal" class="modal hidden">
+  <div class="modal-content" style="text-align:center">
+    <button id="closeQr" class="btn small" style="float:right; margin-bottom:10px;">Close</button>
+    <h3>QR Code</h3>
+    <div id="qrcode" style="margin-top:20px;"></div>
+  </div>
+</div>
+
+  <!-- Sign Up Modal -->
+  <div id="signupModal" class="auth-modal hidden">
+    <div class="auth-modal-overlay"></div>
+    <div class="glass-card">
+      <button class="close-modal" id="closeSignup">&times;</button>
+      <h2>Sign Up</h2>
+
+      <div class="input-box">
+        <input type="text" placeholder="Full Name" id="signupName">
+      </div>
+      <div class="input-box">
+        <input type="email" placeholder="Email" id="signupEmail">
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="Password" id="signupPassword">
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="Confirm Password" id="signupConfirmPass">
+      </div>
+
+      <button class="btn auth-btn" id="signupBtn">Create Account</button>
+
+      <div class="link">
+        Already have an account?  
+        <a href="#" id="switchToSignin">Sign In</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sign In Modal -->
+  <div id="signinModal" class="auth-modal hidden">
+    <div class="auth-modal-overlay"></div>
+    <div class="glass-card">
+      <button class="close-modal" id="closeSignin">&times;</button>
+      <h2>Sign In</h2>
+
+      <div class="input-box">
+        <input type="email" placeholder="Email" id="signinEmail">
+      </div>
+
+      <div class="input-box">
+        <input type="password" placeholder="Password" id="signinPassword">
+      </div>
+
+      <button class="btn auth-btn" id="signinBtn">Sign In</button>
+
+      <div class="link">Don't have an account?  
+        <a href="#" id="switchToSignup">Create one</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+  <div class="container">
+    <div>
+      Copyright © ShortURL <br>
+      Developed by 
+      <a href="https://linkedin.com/in/itsme-vansh" target="_blank" class="developer-link">
+        Vansh Pratap Singh
+      </a>
+    </div>
+
+    <div class="foot-links">
+      • Terms • Privacy Policy
+    </div>
+  </div>
+</footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>

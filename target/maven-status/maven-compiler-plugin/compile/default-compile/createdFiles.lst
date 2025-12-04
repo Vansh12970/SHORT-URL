@@ -1,0 +1,3 @@
+com\example\shorturl\service\UrlService.class
+com\example\shorturl\controller\ShortenerController.class
+com\example\shorturl\ShortUrlApplication.class
