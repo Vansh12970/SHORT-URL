@@ -1,19 +1,21 @@
-# Use Java 17 runtime
 FROM eclipse-temurin:17-jdk
 
-# Set working directory
 WORKDIR /app
 
-# Copy Maven project files
+# Copy only pom.xml and src/ to speed up caching
 COPY pom.xml .
 COPY src ./src
 
-# Build the Spring Boot project
+# Install Maven
 RUN apt-get update && apt-get install -y maven
+
+# Build the application
 RUN mvn -q -e -DskipTests package
 
-# Expose port
+# Copy jar to a predictable name (always app.jar)
+RUN cp target/url-shortener-0.0.1-SNAPSHOT.jar app.jar
+
 EXPOSE 8080
 
-# Run the jar file
-CMD ["java", "-jar", "target/*.jar"]
+# Run the application
+CMD ["java", "-jar", "app.jar"]
