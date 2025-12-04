@@ -1,15 +1,18 @@
-ShortURL
+## ShortURL
 
 A clean, fast, and reliable URL shortening platform built with Java Spring Boot.
 
+## Live Link https://shorturl-nhsu.onrender.com/
+
+# Overview
   ![Dahboard](assets/home.png)
-Overview
+
 
 ShortURL is a modern web application that allows users to quickly shorten long URLs, generate QR codes, manage link history, and access shortened links instantly. The system is designed with a clean UI, efficient backend logic, and a scalable architecture suitable for production-grade use.
 
 The project is built using Java Spring Boot on the backend, combined with a lightweight and responsive vanilla JavaScript frontend. ShortURL aims to provide a simple yet powerful alternative to existing commercial URL shorteners.
 
-Purpose
+# Purpose
 
 The primary purpose of ShortURL is to provide:
 
@@ -19,7 +22,7 @@ The primary purpose of ShortURL is to provide:
 • A backend designed around clean APIs and modular logic
 • A foundation to scale into analytics, branded links, and authentication
 
-Key Features
+# Key Features
 URL Shortening
 
 • Converts any valid URL (supports HTTP/HTTPS) into a short, shareable link
@@ -55,7 +58,7 @@ Error Handling
 • Clear messages for network issues
 • Backend validation for malformed input
 
-Tech Stack
+# Tech Stack
 Backend
 
 • Java 17
@@ -66,14 +69,14 @@ Backend
 • URL Encoding and Hashing
 • Spring Boot DevTools (optional)
 
-Frontend
+# Frontend
 
 • HTML5
 • CSS3
 • Vanilla JavaScript
 • QRCode.js (CDN)
 
-Database
+# Database
 
 • In-memory or persistent DB depending on configuration
 • Common choices: H2, MySQL, PostgreSQL
@@ -81,7 +84,7 @@ Database
 
 id | original_url | short_code | created_at
 
-System Architecture
+# System Architecture
 High-Level Flow
 
 User enters a long URL in the form
@@ -117,7 +120,7 @@ Typically implemented using one of the following:
 • Base62 encoding
 • Randomized token generation
 
-Example logic:
+# Example logic:
 
 hash = SHA-256(longUrl)
 shortCode = first 8 characters of Base62(hash)
@@ -236,7 +239,7 @@ Future Enhancements
 • Branded domains
 • Admin dashboard
 
-Developed By
+## Developed By
 
 Vansh Pratap Singh
 LinkedIn: https://linkedin.com/in/itsme-vansh
