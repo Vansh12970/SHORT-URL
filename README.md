@@ -59,7 +59,7 @@ Error Handling
 • Backend validation for malformed input
 
 # Tech Stack
-Backend
+# Backend
 
 • Java 17
 • Spring Boot
